@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import Keyboard from "./Keyboard";
 
 const HIDDEN = "BONJOUR";
 const ALFABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -43,17 +44,7 @@ class App extends Component {
             {wordMapped[index].found ? tuple.charValue : "_"}
           </span>
         ))}
-        <div className="keyboard">
-          {keyboard.map((keypad, index) => (
-            <button
-              className="keypad"
-              key={index}
-              onClick={() => this.handleClick(index)}
-            >
-              {keypad}
-            </button>
-          ))}
-        </div>
+        <Keyboard content={keyboard} onClick={this.handleClick} />
       </div>
     );
   }
