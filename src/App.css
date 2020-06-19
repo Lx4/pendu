@@ -12,6 +12,14 @@
   margin-bottom: 5px;
 }
 
+.keypad.letter-not-found {
+  border-color: red;
+}
+
+.keypad.letter-found {
+  border-color: green;
+}
+
 .letter {
   margin-right: 5px;
   font-size: 30px;
